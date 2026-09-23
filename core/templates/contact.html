@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block content %}
+        <a href="{% url 'home' %}" class="back-link">← Back to Home</a>
+    <div class="contact-wrap">
+        <h1>Say Hello 💌</h1>
+        <p class="page-subtitle">Got a question or just want to connect? Drop a note below.</p>
+
+        {% if success %}
+            <p class="success-message">Thanks! Your message has been sent. 🎉</p>
+        {% endif %}
+
+        <form method="POST" class="contact-form">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit" class="hero-button">Send it ✉️</button>
+        </form>
+    </div>
+
+{% endblock %}

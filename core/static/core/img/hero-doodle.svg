@@ -1,0 +1,35 @@
+<svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
+  <!-- ground/plant pot -->
+  <ellipse cx="180" cy="430" rx="70" ry="14" fill="#b8e6d0" opacity="0.6"/>
+  <path d="M150 430 L160 380 Q180 370 200 380 L210 430 Z" fill="#f7b8d0" stroke="#4a4a4a" stroke-width="3"/>
+  <path d="M180 380 Q160 320 140 300 Q170 300 180 340 Q195 300 220 305 Q205 335 180 380" fill="#b8e6d0" stroke="#4a4a4a" stroke-width="3" stroke-linejoin="round"/>
+
+  <!-- character sitting cross-legged -->
+  <ellipse cx="300" cy="440" rx="90" ry="16" fill="#a8d8ea" opacity="0.4"/>
+  <path d="M250 420 Q300 450 350 420 L340 400 Q300 415 260 400 Z" fill="#ffe27a" stroke="#4a4a4a" stroke-width="3"/>
+  <rect x="260" y="330" width="80" height="90" rx="30" fill="#f7b8d0" stroke="#4a4a4a" stroke-width="3"/>
+  <circle cx="300" cy="300" r="38" fill="#fff8ec" stroke="#4a4a4a" stroke-width="3"/>
+  <path d="M264 290 Q270 250 300 250 Q330 250 336 290 Q300 280 264 290" fill="#4a4a4a"/>
+  <circle cx="288" cy="302" r="3.5" fill="#4a4a4a"/>
+  <circle cx="312" cy="302" r="3.5" fill="#4a4a4a"/>
+  <path d="M290 314 Q300 320 310 314" stroke="#4a4a4a" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  <ellipse cx="270" cy="298" rx="6" ry="4" fill="#f7b8d0" opacity="0.7"/>
+  <ellipse cx="330" cy="298" rx="6" ry="4" fill="#f7b8d0" opacity="0.7"/>
+
+  <!-- laptop -->
+  <path d="M255 355 L345 355 L335 385 L265 385 Z" fill="#a8d8ea" stroke="#4a4a4a" stroke-width="3" stroke-linejoin="round"/>
+  <rect x="270" y="330" width="60" height="42" rx="4" fill="#4a4a4a"/>
+  <rect x="275" y="335" width="50" height="32" rx="2" fill="#fff8ec"/>
+  <path d="M282 345 h36 M282 353 h28 M282 361 h20" stroke="#a8d8ea" stroke-width="3" stroke-linecap="round"/>
+
+  <!-- arms typing -->
+  <path d="M262 370 Q280 360 288 358" stroke="#fff8ec" stroke-width="14" stroke-linecap="round"/>
+  <path d="M338 370 Q320 360 312 358" stroke="#fff8ec" stroke-width="14" stroke-linecap="round"/>
+
+  <!-- floating stars/sparkles -->
+  <path d="M100 150 l4 10 10 4 -10 4 -4 10 -4 -10 -10 -4 10 -4 z" fill="#ffe27a"/>
+  <path d="M400 120 l3 8 8 3 -8 3 -3 8 -3 -8 -8 -3 8 -3 z" fill="#f7b8d0"/>
+  <path d="M420 350 l3 8 8 3 -8 3 -3 8 -3 -8 -8 -3 8 -3 z" fill="#a8d8ea"/>
+  <circle cx="80" cy="300" r="5" fill="#ffe27a" opacity="0.8"/>
+  <circle cx="440" cy="220" r="4" fill="#b8e6d0" opacity="0.8"/>
+</svg>

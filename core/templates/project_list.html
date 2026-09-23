@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+    <a href="{% url 'home' %}" class="back-link">← Back to Home</a>
+    <h1>Projects</h1>
+
+    <button class="shuffle-button">Shuffle</button>
+
+    <div class="project-grid">
+        {% for project in projects %}
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        {% if project.image %}
+                            <img src="{{ project.image.url }}" alt="{{ project.title }}">
+                        {% endif %}
+                        <h2>{{ project.title }}</h2>
+                        <p>{{ project.tagline }}</p>
+                    </div>
+                    <div class="flip-card-back">
+                        <p>{{ project.description|truncatewords:20 }}</p>
+                        <a href="{% url 'project_detail' project.slug %}">View details →</a>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+
+{% endblock %}

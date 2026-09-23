@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+
+    <section class="hero">
+        <img src="{% static 'core/img/hero-doodle.svg' %}" class="hero-doodle" alt="">
+        <h1 class="hero-title">Supriya Tandukar's Portfolio</h1>
+        <p class="hero-subtitle">Data science, ML & AIs✨</p>
+        <a href="{% url 'project_list' %}" class="hero-button">See my projects</a>
+    </section>
+
+    <section class="about-blurb">
+        <img src="{% static 'core/img/medoodle.png' %}" class="about-banner" alt="Supriya's desk, illustrated">
+        <p>Hi, I'm Supriya - a Computer Science student specializing in Data Science. I build things with Python, machine learning, and a bit of curiosity: from sign-language translators to fraud detection systems. This little corner of the internet is where I collect them. 🌿</p>
+    </section>
+
+    <h2>Domains</h2>
+    <ul class="domain-list">
+        {% for domain in domains %}
+            <li>{{ domain.name }}</li>
+        {% endfor %}
+    </ul>
+
+    <h2>Featured Projects</h2>
+    <div class="project-grid">
+        {% for project in featured_projects %}
+            <div class="project-card">
+                {% if project.image %}
+                    <img src="{{ project.image.url }}" alt="{{ project.title }}">
+                {% endif %}
+                <h2><a href="{% url 'project_detail' project.slug %}">{{ project.title }}</a></h2>
+                <p>{{ project.tagline }}</p>
+            </div>
+        {% endfor %}
+    </div>
+
+{% endblock %}

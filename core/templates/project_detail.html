@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <a href="{% url 'project_list' %}" class="back-link">← Back to Projects</a>
+    
+    <h1>{{ project.title }}</h1>
+    <h2>{{ project.tagline }}</h2>
+
+    {% if project.image %}
+        <img src="{{ project.image.url }}" alt="{{ project.title }}" class="detail-image">
+    {% endif %}
+
+    <p><strong>Domain:</strong> {{ project.domain.name }}</p>
+    <p><strong>Tech Stack:</strong> {{ project.tech_stack }}</p>
+
+    <p>{{ project.description }}</p>
+
+    {% if project.github_url %}
+        <a href="{{ project.github_url }}">View on GitHub</a>
+    {% endif %}
+
+{% endblock %}

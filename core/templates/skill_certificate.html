@@ -1,0 +1,27 @@
+
+{% extends "base.html" %}
+
+{% block content %}
+    <a href="{% url 'home' %}" class="back-link">← Back to Home</a>
+    <h1>Skills & Certifications</h1>
+    <p class="page-subtitle">Skills and certifications, collected along the way</p>
+
+    {% for group in skill_groups %}
+        <div class="skill-group">
+            <h2>{{ group.name }}</h2>
+            <div class="badge-row">
+                {% for skill in group.skills.all %}
+                    <span class="badge">{{ skill.name }}</span>
+                {% endfor %}
+            </div>
+        </div>
+    {% endfor %}
+
+    <h2>Certifications 🏅</h2>
+    <div class="badge-row">
+        {% for cert in certifications %}
+            <span class="badge badge-cert">{{ cert.name }}</span>
+        {% endfor %}
+    </div>
+
+{% endblock %}
